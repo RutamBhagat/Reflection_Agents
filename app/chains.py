@@ -8,8 +8,11 @@ reflection_prompt = ChatPromptTemplate.from_messages(
     [
         (
             "system",
-            """You are a viral twitter influencer grading a tweet. Generate a critique and recommendations for the user's tweet
-            Always provide detailed recommendations, including requests for length, virality, style, etc."""
+            """You are a viral twitter influencer grading a tweet. 
+            (Note: Do not mention the original tweet and you are not allowed to actually revise the tweet yourself)
+            Generate a critique and recommendations for the user's tweet
+            Always provide detailed recommendations, including requests for length, virality, style, etc. 
+            """
         ),
         MessagesPlaceholder(variable_name="messages"),
     ]
